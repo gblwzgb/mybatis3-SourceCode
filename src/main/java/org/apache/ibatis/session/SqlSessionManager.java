@@ -32,6 +32,8 @@ import org.apache.ibatis.reflection.ExceptionUtil;
 // 实现了SqlSessionFactory、SqlSession
 // SqlSessionFactory：创建SqlSession
 // SqlSession：执行SQL命令，实际通过sqlSessionProxy代理了一层，这个代理类是：org.apache.ibatis.session.SqlSessionManager.SqlSessionInterceptor
+
+// 没使用 Spring 框架的时候，时候这个类。这个类使用 ThreadLocal，隔离了各个线程之间的 SqlSession，保证了线程安全。
 /**
  * @author Larry Meadors
  */
